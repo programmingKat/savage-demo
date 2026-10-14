@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser') // deprecated - built into node js now
 const MongoClient = require('mongodb').MongoClient
 
-var db, collection;
+let db, collection;
 
 const url = "mongodb+srv://demo:demo@cluster0-q2ojb.mongodb.net/test?retryWrites=true";
 const dbName = "demo";
@@ -18,14 +18,18 @@ app.listen(3000, () => {
     });
 });
 
-app.set('view engine', 'ejs')
-app.use(bodyParser.urlencoded({extended: true}))
+app.set('view engine', 'ejs') // helps transform into html
+app.use(bodyParser.urlencoded({extended: true})) //html forms are urlencoded
 app.use(bodyParser.json())
-app.use(express.static('public'))
+app.use(express.static('public')) // leon's favorite line of code - don't need specific file path
+// ^ anything in this folder is hosted - don't need to be routed
 
+//route is the Interface
+//whole collection of methods is the API
 app.get('/', (req, res) => {
   db.collection('messages').find().toArray((err, result) => {
     if (err) return console.log(err)
+    console.log(result)
     res.render('index.ejs', {messages: result})
   })
 })
@@ -42,7 +46,8 @@ app.put('/messages', (req, res) => {
   db.collection('messages')
   .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
     $set: {
-      thumbUp:req.body.thumbUp + 1
+      thumbUp: req.body.thumbUp,
+      thumbDown: req.body.thumbDown
     }
   }, {
     sort: {_id: -1},

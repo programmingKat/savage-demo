@@ -7,7 +7,7 @@ let db, collection;
 
 const url = "mongodb+srv://demo:demo@cluster0-q2ojb.mongodb.net/test?retryWrites=true";
 const dbName = "demo";
-
+//connecting to the data base
 app.listen(3000, () => {
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, (error, client) => {
         if(error) {
@@ -27,7 +27,7 @@ app.use(express.static('public')) // leon's favorite line of code - don't need s
 //route is the Interface
 //whole collection of methods is the API
 app.get('/', (req, res) => {
-  db.collection('messages').find().toArray((err, result) => {
+  db.collection('messages').find().sort({likes:-1}).toArray((err, result) => {
     if (err) return console.log(err)
     console.log(result)
     res.render('index.ejs', {messages: result})
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/messages', (req, res) => {
-  db.collection('messages').insertOne({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
+  db.collection('messages').insertOne({name: req.body.name, msg: req.body.msg, thumbUp: 0}, (err, result) => {
     if (err) return console.log(err)
     console.log('saved to database')
     res.redirect('/')

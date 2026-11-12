@@ -13,10 +13,10 @@ A 21 Savage-themed message board where anyone can post a message and give it a t
 - **Front end:** EJS templates, CSS, JavaScript (Fetch API), Font Awesome icons
 - **Back end:** Node.js, Express
 - **Database:** MongoDB (native driver)
-- **Hosting:** [GitHub Pages / Netlify / Vercel / Render]
+- **Hosting:** [Render]
 
 ## How to Use Online 
-1. Open the [live app](https://node-palindrome-5gof.onrender.com).
+1. Open the [live app](https://savage-demo-t7g4.onrender.com/).
 2. Enter your name and a message, then click **Submit**.
 3. Use the thumbs-up and thumbs-down icons to raise or lower a message's score, or the trash icon to delete it.
 
@@ -33,8 +33,8 @@ A 21 Savage-themed message board where anyone can post a message and give it a t
 
 
 | Messages | Adding a Message |
-| --- | --- |
-| ![Message board](./screenshots/one.png) | ![Add a message form](./screenshots/two.png) |
+<img width="1200" height="527" alt="image" src="https://github.com/user-attachments/assets/8823c47a-477e-4920-830f-aefccb908058" />
+
 
 ## Future Improvements
 

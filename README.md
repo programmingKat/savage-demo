@@ -4,9 +4,7 @@ A 21 Savage-themed message board where anyone can post a message and give it a t
 
 **Live app:** [https://your-link-here](https://your-link-here)
 
-![Screenshot of the main screen](./screenshots/main.png)
 
-![21 Savage](public/21savage.jpg)
 
 ## Goal
 

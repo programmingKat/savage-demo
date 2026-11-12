@@ -2,13 +2,11 @@
 
 A 21 Savage-themed message board where anyone can post a message and give it a thumbs up.
 
-**Live app:** [https://your-link-here](https://your-link-here)
-
-
-
 ## Goal
 
-I built this to practice full-stack CRUD with Express and MongoDB. Visitors post a message with their name, and each message is saved to the database and rendered with EJS. Messages can be voted up or down or deleted, and I added a sort to the message list.
+* I built this to practice full-stack CRUD with Express and MongoDB. 
+* Visitors post a message with their name, and each message is saved to the database and rendered with EJS. 
+* Messages can be voted up or down or deleted, and I added a sort to the message list.
 
 ## Tech Stack
 
@@ -17,11 +15,10 @@ I built this to practice full-stack CRUD with Express and MongoDB. Visitors post
 - **Database:** MongoDB (native driver)
 - **Hosting:** [GitHub Pages / Netlify / Vercel / Render]
 
-## How to Use
-
-1. Open the [live app](https://your-link-here).
+## How to Use Online 
+1. Open the [live app](https://node-palindrome-5gof.onrender.com).
 2. Enter your name and a message, then click **Submit**.
-3. Use the thumbs up and thumbs down icons to raise or lower a message's score, or the trash icon to delete it.
+3. Use the thumbs-up and thumbs-down icons to raise or lower a message's score, or the trash icon to delete it.
 
 ## Installation
 
@@ -34,9 +31,6 @@ I built this to practice full-stack CRUD with Express and MongoDB. Visitors post
 1. run `npm run savage`
 2. Navigate to `localhost:3000`
 
-## Live App
-
-**Link:** [https://your-link-here](https://your-link-here)
 
 | Messages | Adding a Message |
 | --- | --- |
